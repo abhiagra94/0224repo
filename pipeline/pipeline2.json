@@ -3,38 +3,17 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Stored procedure1",
-				"type": "SqlServerStoredProcedure",
+				"name": "Wait1",
+				"type": "Wait",
 				"dependsOn": [],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
 				"userProperties": [],
 				"typeProperties": {
-					"storedProcedureName": "[dbo].[updatestatusee]",
-					"storedProcedureParameters": {
-						"status": {
-							"value": "fail",
-							"type": "String"
-						},
-						"filename": {
-							"value": "Employee.csv",
-							"type": "String"
-						}
-					}
-				},
-				"linkedServiceName": {
-					"referenceName": "eduellipsesql",
-					"type": "LinkedServiceReference"
+					"waitTimeInSeconds": 1
 				}
 			}
 		],
 		"annotations": [],
-		"lastPublishTime": "2024-02-18T12:36:57Z"
+		"lastPublishTime": "2024-04-01T15:28:29Z"
 	},
 	"type": "Microsoft.DataFactory/factories/pipelines"
 }
